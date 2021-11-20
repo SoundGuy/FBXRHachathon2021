@@ -73,7 +73,7 @@ public class ConverationLogic : MonoBehaviour
     }
     public string HandleGreetings(string[] values)
     {
-        
+        DoInAllResponses(values);    
         string ouText = pickAStringInRandom(greetingResponses);
         if (howManyGreetings++ > 1)
         {
