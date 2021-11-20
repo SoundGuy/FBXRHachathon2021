@@ -8,6 +8,7 @@ public class ConverationLogic : MonoBehaviour
 {
     [SerializeField]  private GameLogic _gameLogic;
     [SerializeField]  private SoundManager _soundManager;
+    [SerializeField]  private Animator _AlienAnimator;
     // TOdo - move these to scriptable objects?
     [SerializeField] private string[] greetingResponses;
     [SerializeField] private string[] testingResponses;
@@ -68,6 +69,7 @@ public class ConverationLogic : MonoBehaviour
     {
         DebugValues(values);    
         _soundManager.PlayRandomSound();
+        _AlienAnimator.Play("BoraxTalk");
     }
     public string HandleGreetings(string[] values)
     {
